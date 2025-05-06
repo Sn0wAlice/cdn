@@ -30,7 +30,7 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build -t ghcr.io/$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]'):latest \
-                 -t ghcr.io/$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]'):${{ inputs.version }}
+                 -t ghcr.io/$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]'):${{ inputs.version }} .
 
     - name: Push the Docker image to GitHub Container Registry
       run: |
