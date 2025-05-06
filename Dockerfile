@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY server.js .
+COPY main.js .
 
 RUN npm install express multer uuid
 
